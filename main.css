@@ -1,0 +1,55 @@
+body{
+  font-family: 'Lora';
+  background: linear-gradient(rgba(45, 1, 67, 0.65), rgba(0,0,0, 0.65)), url("./img/background stars.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.circle img {
+    border-radius: 50%;
+    height: 1000px;
+    
+	
+}
+.circle {
+  display: inline-block;
+  animation: xAxis 15s infinite; 
+  
+}
+
+.moon{
+   border: 15px solid;
+   animation: yAxis 15s infinite;
+}
+
+@keyframes xAxis {
+   0% { 
+    animation-timing-function: ease-in;
+    transform: translatex(-1000px);
+   }
+  75% {
+    animation-timing-function: ease-in;
+    transform: translateX(4000px);
+  }
+  100%{
+    transform: translatex(4500px);
+    opacity:50;
+
+  }
+}
+
+@keyframes yAxis {
+  0% { 
+    animation-timing-function: ease-in-out;
+    transform: translatey(1800px);
+   }
+  75% {
+    animation-timing-function: ease-in-out;
+    transform: translateY(1200px);
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity:50;
+  }
+}
