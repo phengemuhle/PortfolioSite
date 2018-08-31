@@ -4,52 +4,50 @@ body{
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.animationcont{
+  display: flex;
+  align-content: flex-end;
+  height: 100vh;
+  width: 100%;
+  
 }
 
-.circle img {
+.circle img {    
     border-radius: 50%;
-    height: 1000px;
-    
+    height: 150em;
 	
 }
 .circle {
-  display: inline-block;
-  animation: xAxis 15s infinite; 
+  display: flex;
+  animation: xAxis 200s infinite; 
   
 }
 
 .moon{
-   border: 15px solid;
-   animation: yAxis 15s infinite;
+  align-self: flex-end;
+   animation: yAxis 200s infinite;
 }
-
+/* BACKGROUND ANIMATION */
 @keyframes xAxis {
    0% { 
     animation-timing-function: ease-in;
-    transform: translatex(-1000px);
+    transform: translatex(-150em);
    }
-  75% {
-    animation-timing-function: ease-in;
-    transform: translateX(4000px);
-  }
   100%{
-    transform: translatex(4500px);
-    opacity:50;
-
+    transform: translatex(350em);
   }
 }
 
 @keyframes yAxis {
   0% { 
     animation-timing-function: ease-in-out;
-    transform: translatey(1800px);
+    transform: translateY(150em); 
    }
-  75% {
-    animation-timing-function: ease-in-out;
-    transform: translateY(1200px);
-  }
   100% {
-    transform: translateY(1000px);
-    opacity:50;
+    animation-timing-function: ease-in-out;
+    transform: translateY(20em); 
   }
 }
