@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .circle {
   display: flex;
-  animation: xAxis 10s infinite; 
+  animation: xAxis 200s infinite; 
   z-index: -1;
 }
 
@@ -241,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   align-self: flex-end;
   height: auto;
   width: 60em;
-  animation: yAxis 10s infinite;
+  animation: yAxis 200s infinite;
 }
 
 /* BACKGROUND ANIMATION */
