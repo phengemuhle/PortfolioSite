@@ -1,0 +1,331 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Lora';
+  background: linear-gradient(rgba(45, 1, 67, 0.65), rgba(0,0,0, 0.65)), url("../img/background-stars.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas-Neue';
+}
+.name{
+  display: flex;
+  justify-content: center;
+  font-size: 8em;
+  color: whitesmoke;
+  opacity: .5;
+  text-align: center;
+
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 60vw;
+}
+
+.absolute-center, .menu, .menu .btn .fa, .menu .btn.trigger .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.menu {
+  width: 9em;
+  height: 9em;
+}
+.menu .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  z-index: -10;
+  cursor: pointer;
+  -webkit-transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+  transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+  transition: opacity 1s, z-index 0.3s, transform 1s;
+  transition: opacity 1s, z-index 0.3s, transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.menu .btn .fa {
+  font-size: 3em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #000;
+}
+.menu .btn:hover .fa {
+  color: rgba(152, 15, 173, 0.7);
+}
+.menu .btn.trigger {
+  opacity: 1;
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.menu .btn.trigger:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.menu .btn.trigger:hover .line {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger:hover .line:before, .menu .btn.trigger:hover .line:after {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger .line {
+  width: 60%;
+  height: 6px;
+  background: #000;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.3s, height 0.3s, top 0.3s;
+  transition: background-color 0.3s, height 0.3s, top 0.3s;
+}
+.menu .btn.trigger .line:before, .menu .btn.trigger .line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #000;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+.menu .btn.trigger .line:before {
+  top: -12px;
+  -webkit-transform-origin: 15% 100%;
+          transform-origin: 15% 100%;
+}
+.menu .btn.trigger .line:after {
+  top: 12px;
+  -webkit-transform-origin: 25% 30%;
+          transform-origin: 25% 30%;
+}
+.menu .rotater {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.menu.active .btn-icon {
+  opacity: 1;
+  z-index: 50;
+}
+.menu.active .trigger .line {
+  height: 0px;
+  top: 45%;
+}
+.menu.active .trigger .line:before {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  width: 110%;
+}
+.menu.active .trigger .line:after {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  width: 110%;
+}
+
+.rotater:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.menu.active .rotater:nth-child(1) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(0deg);
+          transform: translateY(-10em) rotate(0deg);
+}
+
+.rotater:nth-child(2) {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.menu.active .rotater:nth-child(2) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(60deg);
+          transform: translateY(-10em) rotate(60deg);
+}
+
+.rotater:nth-child(3) {
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+}
+
+.menu.active .rotater:nth-child(3) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(120deg);
+          transform: translateY(-10em) rotate(120deg);
+}
+
+.rotater:nth-child(4) {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+.menu.active .rotater:nth-child(4) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-120deg);
+          transform: translateY(-10em) rotate(-120deg);
+}
+
+.rotater:nth-child(5) {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.menu.active .rotater:nth-child(5) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-60deg);
+          transform: translateY(-10em) rotate(-60deg);
+}
+
+.rotater:nth-child(6) {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.menu.active .rotater:nth-child(6) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(180deg);
+          transform: translateY(-10em) rotate(180deg);
+}
+
+
+.animationcont{
+  display: flex;
+  align-content: flex-end;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  
+}
+
+.circle img {    
+    border-radius: 50%;
+    height: 50em;
+    z-index: -1;
+	
+}
+.circle {
+  display: flex;
+  animation: xAxis 10s infinite; 
+  z-index: -1;
+  
+}
+
+
+.moon{
+  align-self: flex-end;
+  height: auto;
+  width: 60em;
+  animation: yAxis 10s infinite;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes xAxis {
+   0% { 
+    animation-timing-function: ease-in;
+    transform: translatex(-50em);
+   }
+  100%{
+    transform: translatex(350em);
+  }
+}
+
+@keyframes yAxis {
+  0% { 
+    animation-timing-function: ease-in-out;
+    transform: translateY(50em); 
+   }
+  100% {
+    animation-timing-function: ease-in-out;
+    transform: translateY(20em); 
+  }
+}
+.tags { 
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  color: black;
+  opacity: 1s;
+}
+.galv-logo{
+  height: 1em;
+  filter: brightness(0%)
+}
+.res-pic{
+  display:flex;
+  justify-content: center;
+
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    opacity: .7;
+    border-radius: 50%;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: .7;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: rgba(152, 15, 173, 0.7);
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color:black;
+  opacity: .7;
+}
