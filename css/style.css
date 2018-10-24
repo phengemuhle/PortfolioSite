@@ -1,6 +1,10 @@
 *,
 *:before,
 *:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -361,10 +365,19 @@ h6 {
 @media (max-width: 767px) {
   .name-wrapper .name {
     font-size: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: -2em;
   }
   .menu {
     width: 7em;
     height: 7em;
+  }
+  .menu .rotater {
+    margin-top: -3em;
+  }
+  .menu .btn.trigger {
+    margin-top: -6em;
   }
   .tags {
     font-size: 1.3em;
@@ -400,9 +413,10 @@ h6 {
 @media (max-width: 321px) {
   .name-wrapper .name {
     font-size: 2em;
+    margin-top: -2em;
   }
   .menu .btn.trigger {
-    top: 23%;
+    margin-top: -6em;
   }
   .menu {
     display: flex;
@@ -424,29 +438,32 @@ h6 {
     width: 50%;
     height: 50%;
   }
+  .menu .rotater {
+    margin-top: -3em;
+  }
 
   .menu.active .rotater:nth-child(1) .btn-icon {
     -webkit-transform: translateY(0em) rotate(0deg);
-    transform: translateY(-3.7em) rotate(0deg);
+    transform: translateY(-5.7em) rotate(0deg);
   }
   .menu.active .rotater:nth-child(2) .btn-icon {
     -webkit-transform: translateY(0em) rotate(60deg);
-    transform: translateY(-3.7em) rotate(60deg);
+    transform: translateY(-5.7em) rotate(60deg);
   }
   .menu.active .rotater:nth-child(3) .btn-icon {
     -webkit-transform: translateY(0em) rotate(120deg);
-    transform: translateY(-3.7em) rotate(120deg);
+    transform: translateY(-5.7em) rotate(120deg);
   }
   .menu.active .rotater:nth-child(4) .btn-icon {
     -webkit-transform: translateY(0em) rotate(-120deg);
-    transform: translateY(-3.7em) rotate(-120deg);
+    transform: translateY(-5.7em) rotate(-120deg);
   }
   .menu.active .rotater:nth-child(5) .btn-icon {
     -webkit-transform: translateY(0em) rotate(-60deg);
-    transform: translateY(-3.7em) rotate(-60deg);
+    transform: translateY(-5.7em) rotate(-60deg);
   }
   .menu.active .rotater:nth-child(6) .btn-icon {
     -webkit-transform: translateY(0em) rotate(180deg);
-    transform: translateY(-3.7em) rotate(180deg);
+    transform: translateY(-5.7em) rotate(180deg);
   }
 }
