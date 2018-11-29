@@ -9,7 +9,7 @@
 body {
   font-family: "Lora";
   background: linear-gradient(rgba(45, 1, 67, 0.65), rgba(0, 0, 0, 0.65)),
-    url("../img/background-stars.jpg");
+    url("../img/galaxy.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -90,11 +90,13 @@ h6 {
   font-size: 3em;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
-  color: #000;
+  color: #f7901e;
+  opacity: .30;
 }
 
 .menu .btn:hover .fa {
   color: #f7901e;
+  opacity: 1;
 }
 
 .menu .btn.trigger {
@@ -312,20 +314,20 @@ h6 {
 
 .tags {
   font-size: 1em;
-  color: black;
-  opacity: 1s;
+  color:rgb(204, 202, 204);
+  opacity: .8;
 }
 
 .galv-logo:hover {
   height: 1em;
-  filter: brightness(90%);
+  filter: brightness(100%);
   /* background-color: rgba(152, 15, 173, 0.7); */
 
 }
 
 .galv-logo {
   height: 1em;
-  filter: brightness(0%);
+  filter: brightness(80%);
 }
 
 .res-pic {
@@ -456,7 +458,6 @@ h6 {
   background-color: wheat;
 }
 .downloadBtn{
-  
   background-color: lightgray;
   border: none;
   color: white;
