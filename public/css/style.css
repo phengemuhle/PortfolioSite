@@ -441,6 +441,7 @@ h6 {
   text-align: center;
   color: aliceblue;
   font-size: 2em;
+  margin: 1em;
 }
 .page {
   position: relative;
@@ -497,7 +498,9 @@ h6 {
     font-size: 3em;
     margin-left: 2em;
     margin-right: 2em;
-    margin-bottom: 2em;
+  }
+  .name-wraper {
+    margin-bottom: -2em;
   }
 
   .menu {
@@ -508,18 +511,21 @@ h6 {
   .menu .rotater {
     margin-top: -3em;
   }
-
+  
   .menu .btn.trigger {
-    margin-top: -6em;
     top: -43%;
   }
-
+  
   .tags {
-    font-size: 1.3em;
-  }
+    font-size: 1.5em;
+    position: relative;
 
+  }
+  
   .menu .btn .fa {
-    font-size: 2em;
+    font-size: 2.6em;
+    top: .7em;
+
   }
 
   .menu.active .rotater:nth-child(1) .btn-icon {
@@ -553,15 +559,14 @@ h6 {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .name-wrapper .name {
     font-size: 2em;
-    /* margin-top: -2em; */
+    margin-top: -2em;
   }
 
   .menu .btn.trigger {
-    margin-top: -6em;
-    top: 0;
+    top: -6em;
   }
 
   .menu {
