@@ -458,7 +458,7 @@ h6 {
   text-align: center;
   color: aliceblue;
   font-size: 2em;
-  margin: 1em;
+  margin-bottom: 1em;
 }
 .page {
   position: relative;
@@ -497,6 +497,56 @@ h6 {
   cursor: pointer;
   font-size: 2em;
 }
+.portfolioProjectCont{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 60%;
+  overflow: scroll;
+  padding: .5em;
+}
+.projectsCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  background-color: azure;
+  height: 30em;
+  width: 20em;
+  border-radius: 10%;
+  border: 2px solid grey;
+  padding:.5em;
+  margin-bottom: 1em;
+}
+.screenshot{
+  width: 80%;
+  margin: .5em;
+  border: 2px solid black;
+}
+.projectsCont h3{
+  text-align: center;
+}
+.projectsCont:hover{
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 0px 30px gray;
+  -webkit-transform: scale(1);
+  transform: scale(1.01);
+}
+.techCont{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 40%;
+  align-content: space-around;
+}
+.techIcon{
+  max-height: 4em;
+}
+
+
 @media (max-width: 1025px) {
   .name-wrapper .name {
     display: flex;
