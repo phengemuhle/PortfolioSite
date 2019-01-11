@@ -539,8 +539,31 @@ h6 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  height: 40%;
+  height: 50%;
   align-content: space-around;
+}
+.projectTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  text-align: center;
+  margin-bottom: .2em;
+}
+.projectImg{
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  margin-bottom: .2em;
+
+}
+.projectDescript{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40%;
+  margin-bottom: .2em;
+
 }
 .techIcon{
   max-height: 4em;
